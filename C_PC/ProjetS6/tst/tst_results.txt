@@ -1,0 +1,20 @@
+TF sur 16384 termes
+			Signal	TF	Twiddles	
+Besoins mémoires :	32	128	128	ko
+	FFTW :		8 o	256	256	ko
+			Plan	Signal	FFTW complexe 
+Temps execution :
+	Renversement 2 :	+6.407e+02	 ms
+	RADIX 2 :		+1.770e+03	 ms
+	+ complexes :		245760
+	* complexes :		114688
+	Erreur Radix 2:		9.276067e-08
+
+	Renversement 4 :	+8.379e+01	 ms
+	RADIX 4 :		+1.141e+03	 ms
+	+ complexes :		202068
+	* complexes :		69633
+	Erreur Radix 4:		-1.857724e-09
+
+	FFTW :			+3.865e+02	 ms
+	Erreur FFtW:		2.485958e-12

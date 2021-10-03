@@ -1,0 +1,14 @@
+* source V2_LM386
+X_U1         N14339 0 N36984 0 N36093 VCC 0 N14376 LM386 
+C_C1         N14339 N14376  10u  TC=0,0 
+V_V1         VCC 0 5V
+C_C2         N36093 OUT  220n  TC=0,0 
+C_C3         0 VCC  100n  TC=0,0 
+C_C4         0 VCC  10u  TC=0,0 
+R_R2         0 N36093  100k TC=0,0 
+R_R3         OUT 0  10MEG TC=0,0 
+X_R4         0 N36984 N36930 POT PARAMS: SET=0.5 VALUE=10K
+C_C6         0 N36930  10u  TC=0,0 
+V_V2         N36930 0  AC 0
++SIN 0.01 0.15 1K 0 0 0
+R_R18         N36093 0  100k TC=0,0 

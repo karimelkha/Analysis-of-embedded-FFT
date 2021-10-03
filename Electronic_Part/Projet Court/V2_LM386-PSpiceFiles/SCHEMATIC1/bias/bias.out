@@ -1,0 +1,160 @@
+
+**** 06/05/20 11:51:10 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\v2_lm386-pspicefiles\schematic1\bias.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\v2_lm386-pspicefiles\schematic1\bias\bias_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING bias_profile.inc ****
+.LIB    ".\lm386.lib" 
+
+**** RESUMING bias.cir ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source V2_LM386
+X_U1         N14339 0 N36984 0 N36093 VCC 0 N14376 LM386 
+C_C1         N14339 N14376  10u  TC=0,0 
+V_V1         VCC 0 5V
+C_C2         N36093 OUT  220n  TC=0,0 
+C_C3         0 VCC  100n  TC=0,0 
+C_C4         0 VCC  10u  TC=0,0 
+R_R2         0 N36093  100k TC=0,0 
+R_R3         OUT 0  10MEG TC=0,0 
+X_R4         0 N36984 N36930 POT PARAMS: SET=0.5 VALUE=10K
+C_C6         0 N36930  10u  TC=0,0 
+V_V2         N36930 0  AC 0
++SIN 0.01 0.15 1K 0 0 0
+R_R18         N36093 0  100k TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 06/05/20 11:51:10 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\v2_lm386-pspicefiles\schematic1\bias.
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.ddnpn      X_U1.ddpnp      
+               NPN             PNP             
+       LEVEL    1               1            
+          IS   10.000000E-15   10.000000E-15 
+          BF  400             200            
+          NF    1               1            
+         VAF  100             100            
+          BR    1               1            
+          NR    1               1            
+         VAR  100             100            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    5.000000E-12    5.000000E-12 
+         VJE     .75             .75         
+         MJE     .3333           .3333       
+         CJC    2.000000E-12    2.000000E-12 
+         VJC     .75             .75         
+         MJC     .3333           .3333       
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF    1.000000E-09    1.000000E-09 
+         VTF   10              10            
+         ITF    1               1            
+          TR   10.000000E-09   10.000000E-09 
+         XTB    1.5             1.5          
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+**** 06/05/20 11:51:10 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\v2_lm386-pspicefiles\schematic1\bias.
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    0.0000  (  VCC)    5.0000  (N14339)     .9625 (N14376)     .8802     
+
+(N36093)    2.1091 (N36930)     .0100 (N36984)     .0048 (X_U1.10002)    4.3034 
+
+(X_U1.10004)    2.7048                (X_U1.10008)     .8711                    
+
+(X_U1.10009)    2.1271                (X_U1.10011)     .3670                    
+
+(X_U1.10012)     .4152                (X_U1.10013)     .5039                    
+
+(X_U1.10014)     .6967                (X_U1.10017)    1.5494                    
+
+(X_U1.10018)     .5957                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.562E-02
+    V_V2        -1.047E-06
+
+    TOTAL POWER DISSIPATION   7.81E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/05/20 11:51:10 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\v2_lm386-pspicefiles\schematic1\bias.
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

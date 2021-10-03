@@ -1,0 +1,67 @@
+
+**** 06/09/20 20:13:55 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\Multiplexeur-PSpiceFiles\SCHEMATIC1\b
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\Multiplexeur-PSpiceFiles\SCHEMATIC1\bias\bias_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING bias_profile.inc ****
+.LIB    ".\adg409.lib" 
+
+**** RESUMING bias.cir ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10 ms 0 
+------------$
+ERROR(ORPSIM-16152): Invalid number
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MULTIPLEXEUR
+V_V2         VA1 0 2V
+V_V4         VA3 0 4V
+V_V3         VA2 0 3V
+V_V5         VA4 0 5V
+U_DSTM2         STIM(1,1)
++ $G_DPWR $G_DGND
++ N57078 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 5ms 1  
+V_V6         VDD 0 5V
+U_DSTM1         STIM(1,1)
++ $G_DPWR $G_DGND
++ N56974 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 2.5ms 1  
++ 5ms 0  
++ 7.5ms 1 
+X_U1         VA1 VA2 VA3 VA4 0 0 0 0 N57078 N56974 VDD OUT 0 VDD 0 0 ADG409 
+
+**** RESUMING bias.cir ****
+.END
+

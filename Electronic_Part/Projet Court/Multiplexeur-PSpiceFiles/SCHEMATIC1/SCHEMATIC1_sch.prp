@@ -1,0 +1,281 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VDC")
+        ("STIM1")
+    )
+    ("instances"
+        ("V2"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"2V")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-30.27pW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("V4"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V4")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"4V")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-8.603pW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("V3"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V3")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"3V")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-4.149pW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("V5"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V5")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5V")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-14.58pW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("DSTM2"
+            ("device_name"	"STIM1")
+            ("pspice_path"	"U_DSTM2")
+            ("level"	"0")
+            ("model_params"
+                ("COMMAND4"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND4")
+                )
+                ("COMMAND2"
+                    ("value"	"5ms 1")
+                    ("pspice_param"	"COMMAND2")
+                )
+                ("COMMAND1"
+                    ("value"	"0s 0")
+                    ("pspice_param"	"COMMAND1")
+                )
+                ("COMMAND3"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND3")
+                )
+                ("TIMESTEP"
+                    ("value"	"")
+                    ("pspice_param"	"TIMESTEP")
+                )
+                ("COMMAND5"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND5")
+                )
+                ("COMMAND6"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND6")
+                )
+                ("COMMAND7"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND7")
+                )
+                ("COMMAND8"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND8")
+                )
+                ("COMMAND9"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND9")
+                )
+                ("COMMAND10"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND10")
+                )
+                ("COMMAND11"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND11")
+                )
+                ("COMMAND12"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND12")
+                )
+                ("COMMAND13"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND13")
+                )
+                ("COMMAND14"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND14")
+                )
+                ("COMMAND15"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND15")
+                )
+                ("COMMAND16"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND16")
+                )
+                ("DIG_PWR"
+                    ("value"	"$G_DPWR")
+                    ("pspice_param"	"DIG_PWR")
+                )
+                ("DIG_GND"
+                    ("value"	"$G_DGND")
+                    ("pspice_param"	"DIG_GND")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("WIDTH"
+                    ("value"	"1")
+                    ("pspice_param"	"WIDTH")
+                )
+                ("FORMAT"
+                    ("value"	"1")
+                    ("pspice_param"	"FORMAT")
+                )
+            )
+        )
+        ("V6"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V6")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5V")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-400.0uW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("DSTM1"
+            ("device_name"	"STIM1")
+            ("pspice_path"	"U_DSTM1")
+            ("level"	"0")
+            ("model_params"
+                ("COMMAND3"
+                    ("value"	"5ms 0")
+                    ("pspice_param"	"COMMAND3")
+                )
+                ("COMMAND1"
+                    ("value"	"0s 0")
+                    ("pspice_param"	"COMMAND1")
+                )
+                ("COMMAND2"
+                    ("value"	"2.5ms 1")
+                    ("pspice_param"	"COMMAND2")
+                )
+                ("COMMAND4"
+                    ("value"	"7.5ms 1")
+                    ("pspice_param"	"COMMAND4")
+                )
+                ("TIMESTEP"
+                    ("value"	"")
+                    ("pspice_param"	"TIMESTEP")
+                )
+                ("COMMAND5"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND5")
+                )
+                ("COMMAND6"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND6")
+                )
+                ("COMMAND7"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND7")
+                )
+                ("COMMAND8"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND8")
+                )
+                ("COMMAND9"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND9")
+                )
+                ("COMMAND10"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND10")
+                )
+                ("COMMAND11"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND11")
+                )
+                ("COMMAND12"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND12")
+                )
+                ("COMMAND13"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND13")
+                )
+                ("COMMAND14"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND14")
+                )
+                ("COMMAND15"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND15")
+                )
+                ("COMMAND16"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND16")
+                )
+                ("DIG_PWR"
+                    ("value"	"$G_DPWR")
+                    ("pspice_param"	"DIG_PWR")
+                )
+                ("DIG_GND"
+                    ("value"	"$G_DGND")
+                    ("pspice_param"	"DIG_GND")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("WIDTH"
+                    ("value"	"1")
+                    ("pspice_param"	"WIDTH")
+                )
+                ("FORMAT"
+                    ("value"	"1")
+                    ("pspice_param"	"FORMAT")
+                )
+            )
+        )
+    )
+)

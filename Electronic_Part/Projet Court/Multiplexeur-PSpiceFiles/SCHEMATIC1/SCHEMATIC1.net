@@ -1,0 +1,23 @@
+* source MULTIPLEXEUR
+V_V2         VA1 0 2V
+V_V4         VA3 0 4V
+V_V3         VA2 0 3V
+V_V5         VA4 0 5V
+U_DSTM2         STIM(1,1)
++ $G_DPWR $G_DGND
++ N57078 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 5ms 1  
+V_V6         VDD 0 5V
+U_DSTM1         STIM(1,1)
++ $G_DPWR $G_DGND
++ N56974 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 2.5ms 1  
++ 5ms 0  
++ 7.5ms 1 
+X_U1         VA1 VA2 VA3 VA4 0 0 0 0 N57078 N56974 VDD OUT 0 VDD 0 0 ADG409 

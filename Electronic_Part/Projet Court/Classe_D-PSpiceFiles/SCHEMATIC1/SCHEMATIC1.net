@@ -1,0 +1,18 @@
+* source CLASSE_D
+X_U1         N15355 N15355 VLM 0 VLM N14921 N14553 0 LM5110_1M 
+R_Rgn         N14553 N14613  2.2 TC=0,0 
+M_M1         N14652 N14613 0 0 MbreakN           
+L_L1         N14652 N14689  47uH  
+C_C1         0 N14689  1u  TC=0,0 
+R_R2         0 OUT  8 TC=0,0 
+C_C2         N14689 OUT  1000u  TC=0,0 
+M_M2         VDD N14965 N14689 N14689 MbreakP           
+R_Rgp         N14921 N14965  2.2 TC=0,0 
+X_U9         VR VIN VDD 0 N15355 0 LM111
+V_V8         VDD 0 5V
+R_Rpullup1         N15355 VDD  330 TC=0,0 
+V_Vin         VIN 0  AC 0
++SIN 0 6 1k 0 0 0
+V_Vr         VR 0  
++PULSE 6 -6 0 0.5m 0.5m 1p 5u
+V_VLM         VLM 0 12V

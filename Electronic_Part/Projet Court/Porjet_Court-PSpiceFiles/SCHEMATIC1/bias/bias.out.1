@@ -1,0 +1,57 @@
+
+**** 06/04/20 01:48:13 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\porjet_court-pspicefiles\schematic1\b
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\porjet_court-pspicefiles\schematic1\bias\bias_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING bias_profile.inc ****
+.LIB    ".\lm386.lib" 
+
+**** RESUMING bias.cir ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10 ms 0 
+------------$
+ERROR(ORPSIM-16152): Invalid number
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PORJET_COURT
+V_V1         VCC 0 5V
+X_R15         0 N36946 N36011 POT PARAMS: SET=0.5 VALUE=10K
+X_U1         N36826 0 N36950 0 N36306 VCC N36123 N36897 LM386 
+V_V2         N36011 0  AC 1
++SIN 0 1 10k 0 0 0
+C_C1         N36826 N36897  10u  TC=0,0 
+C_C2         N36946 N36950  10u  TC=0,0 
+C_C3         0 N36123  10u  TC=0,0 
+C_C4         N36306 OUT  220u  TC=0,0 
+C_C5         N37235 N36306  47n  TC=0,0 
+R_R16         0 N37235  10 TC=0,0 
+R_R17         OUT 0  10MEG TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+

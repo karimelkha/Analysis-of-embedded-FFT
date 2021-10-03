@@ -1,0 +1,51 @@
+
+**** 06/05/20 11:36:02 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\v2_lm386-pspicefiles\schematic1\bias.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source V2_LM386
+X_U1         N14339 0 N36984 0 N36093 VCC 0 N14376 LM386 
+C_C1         N14339 N14376  10u  TC=0,0 
+V_V1         VCC 0 5V
+C_C2         N36093 0  220n  TC=0,0 
+C_C3         0 VCC  100n  TC=0,0 
+C_C4         0 VCC  10u  TC=0,0 
+R_R2         0 N36093  10 TC=0,0 
+R_R3         0 0  10MEG TC=0,0 
+X_R4         0 N36984 N36930 POT PARAMS: SET=0.5 VALUE=10K
+C_C6         0 N36930  10u  TC=0,0 
+V_V2         N36930 0  AC 0
++SIN 0.01 0.02 1K 0 0 0
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit LM386 used by X_U1 is undefined
+

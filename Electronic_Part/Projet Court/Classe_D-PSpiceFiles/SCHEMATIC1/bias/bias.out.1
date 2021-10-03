@@ -1,0 +1,478 @@
+
+**** 06/09/20 16:22:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\classe_d-pspicefiles\schematic1\bias.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\classe_d-pspicefiles\schematic1\bias\bias_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING bias_profile.inc ****
+.LIB    ".\lm5110_1m_trans.lib" 
+
+**** RESUMING bias.cir ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CLASSE_D
+X_U1         N15355 N15355 VLM 0 VLM N14921 N14553 0 LM5110_1M 
+R_Rgn         N14553 N14613  2.2 TC=0,0 
+M_M1         N14652 N14613 0 0 MbreakN           
+L_L1         N14652 N14689  47uH  
+C_C1         0 N14689  1u  TC=0,0 
+R_R2         0 OUT  8 TC=0,0 
+C_C2         N14689 OUT  1000u  TC=0,0 
+M_M2         VDD N14965 N14689 N14689 MbreakP           
+R_Rgp         N14921 N14965  2.2 TC=0,0 
+X_U9         VR VIN VDD 0 N15355 0 LM111
+V_V8         VDD 0 5V
+R_Rpullup1         N15355 VDD  330 TC=0,0 
+V_Vin         VIN 0  AC 0
++SIN 0 6 1k 0 0 0
+V_Vr         VR 0  
++PULSE 6 -6 0 5u 0 0.1m 5u
+V_V9         VLM 0 12V
+
+**** RESUMING bias.cir ****
+.END
+
+**** 06/09/20 16:22:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\classe_d-pspicefiles\schematic1\bias.
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U9.dx         
+          IS  800.000000E-18 
+          RS    1            
+
+
+**** 06/09/20 16:22:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\classe_d-pspicefiles\schematic1\bias.
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U9.qin        X_U9.qmi        X_U9.qmo        X_U9.qoc        
+               PNP             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  833.3             1.002000E+03    1.000000E+03   34.490000E+03 
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               1.000000E-15    1.000000E-15 
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF                                                  364.600000E-12 
+          TR                                  118.800000E-09   79.340000E-09 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.42         
+           D     .52             .87             .87             .87         
+
+
+**** 06/09/20 16:22:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\classe_d-pspicefiles\schematic1\bias.
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         MbreakP         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vr.
+
+**** 06/09/20 16:22:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\PAULE\DOCUMENTS\POLYTECH SORBONNE\3A\S2\Projet Court\classe_d-pspicefiles\schematic1\bias.
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VR)    6.0000  (  OUT)    0.0000  (  VDD)    5.0000  (  VIN)    0.0000      
+
+(  VLM)   12.0000  (N14553)   12.0000 (N14613)   12.0000 (N14652)    4.3490     
+
+(N14689)    4.3490 (N14921)   12.0000 (N14965)   12.0000 (N15355)    5.0000     
+
+(X_U9.7)    1.1108 (X_U9.8)     .6503 (X_U9.9)     .0179 (X_U9.10)     .0179    
+
+(X_U9.11)     .0179                   (X_U9.21)    6.4500                       
+
+(X_U9.22)     .4500                   (X_U1.UVLO)    1.0000                     
+
+(X_U1.X_U8.1)    1.0000               (X_U1.X_U9.1)    1.0000                   
+
+(X_U1.IN_INTA)    5.0000              (X_U1.IN_INTB)    5.0000                  
+
+(X_U1.X_U11.1)    5.0000              (X_U1.X_U13.1)    5.0000                  
+
+(X_U1.X_U1.101)    1.0000             (X_U1.X_U1.102)     .5000                 
+
+(X_U1.X_U2.101)    1.0000             (X_U1.X_U2.102)     .5000                 
+
+(X_U1.N14500445)   17.0000            (X_U1.N14500451)   17.0000                
+
+(X_U1.N14500477)   17.0000            (X_U1.N14500503)   17.0000                
+
+(X_U1.N14500507)   12.0000            (X_U1.N14500679) 240.2E-15                
+
+(X_U1.N14500841)    1.0000            (X_U1.N14529231)    3.0150                
+
+(X_U1.N14529337)    1.5500            (X_U1.N14537630)    1.7500                
+
+(X_U1.N14537650)     .4000            (X_U1.N14548981)   17.0000                
+
+(X_U1.N14548987)   17.0000            (X_U1.N14549013)   17.0000                
+
+(X_U1.N14549039)   17.0000            (X_U1.N14549043)   12.0000                
+
+(X_U1.N14549193) 240.2E-15            (X_U1.N14549349)    1.0000                
+
+(X_U1.N14549539)    1.0000            (X_U1.N14550160)    1.7500                
+
+(X_U1.N14550180)     .4000            (X_U1.N14565482)    1.0000                
+
+(X_U1.NSHDN_OUT)    1.0000            (X_U1.X_U8.INM1)   -8.9850                
+
+(X_U1.X_U8.INP1)    0.0000            (X_U1.X_U8.INP2)     .2300                
+
+(X_U1.X_U9.INM1)  -10.4500            (X_U1.X_U9.INP1)    0.0000                
+
+(X_U1.X_U9.INP2)     .0825            (X_U1.N145291613)     .2300               
+
+(X_U1.N145292673)     .0825           (X_U1.X_U11.INM1)   -3.2500               
+
+(X_U1.X_U11.INP1)    0.0000           (X_U1.X_U11.INP2)     .4000               
+
+(X_U1.X_U12.YINT)    1.0000           (X_U1.X_U13.INM1)   -3.2500               
+
+(X_U1.X_U13.INP1)    0.0000           (X_U1.X_U13.INP2)     .4000               
+
+(X_U1.X_U16.YINT)    1.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8        -1.771E-03
+    V_Vin        1.199E-07
+    V_Vr        -6.439E-12
+    V_V9        -2.399E-11
+    X_U1.V_V8    0.000E+00
+    X_U1.V_V6    0.000E+00
+    X_U1.V_V1    0.000E+00
+    X_U1.V_V2    0.000E+00
+    X_U1.V_V3    0.000E+00
+    X_U1.V_V4    0.000E+00
+    X_U1.V_V7    0.000E+00
+    X_U1.V_V5    0.000E+00
+    X_U9.vi1    -6.439E-12
+    X_U9.vi2     1.199E-07
+    X_U9.v1     -4.983E-12
+
+    TOTAL POWER DISSIPATION   8.86E-03  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  295.0E-06.
+         Time step =  975.8E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT)                    =    2.479mV  \    2.449mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.E_E1)              =    59.61nA  \   119.21nA
+    I(X_U9.e1)                =    1.018nA  \    1.025nA
+    I(X_U1.X_U1.E1)           =         0A  \   -14.90nA
+    I(X_U9.v1)                =   -1.018nA  \   -1.025nA
+
+  These devices failed to converge:
+    X_U9.q3   
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VR)   -6.0000  (  OUT)     .0025  (  VDD)    5.0000  (  VIN)    5.7618      
+
+(  VLM)   12.0000  (N14553)   12.0000 (N14613)   12.0000 (N14652)    4.3515     
+
+(N14689)    4.3515 (N14921)   12.0000 (N14965)   12.0000 (N15355)    5.0000     
+
+(X_U9.7)   -4.8713 (X_U9.8) -440.2100 (X_U9.9)   -4.8892 (X_U9.10)   -4.8892    
+
+(X_U9.11)   -4.8892                   (X_U9.21)   -5.5500                       
+
+(X_U9.22)    6.2118                   (X_U1.UVLO)    1.0000                     
+
+(X_U1.X_U8.1)    1.0000               (X_U1.X_U9.1)    1.0000                   
+
+(X_U1.IN_INTA)    5.0000              (X_U1.IN_INTB)    5.0000                  
+
+(X_U1.X_U11.1)    5.0000              (X_U1.X_U13.1)    5.0000                  
+
+(X_U1.X_U1.101)    1.0000             (X_U1.X_U1.102)     .5000                 
+
+(X_U1.X_U2.101)    1.0000             (X_U1.X_U2.102)     .5000                 
+
+(X_U1.N14500445)   17.0000            (X_U1.N14500451)   17.0000                
+
+(X_U1.N14500477)   17.0000            (X_U1.N14500503)   17.0000                
+
+(X_U1.N14500507)   12.0000            (X_U1.N14500679) 241.6E-15                
+
+(X_U1.N14500841)    1.0000            (X_U1.N14529231)    3.0150                
+
+(X_U1.N14529337)    1.5500            (X_U1.N14537630)    1.7500                
+
+(X_U1.N14537650)     .4000            (X_U1.N14548981)   17.0000                
+
+(X_U1.N14548987)   17.0000            (X_U1.N14549013)   17.0000                
+
+(X_U1.N14549039)   17.0000            (X_U1.N14549043)   12.0000                
+
+(X_U1.N14549193) 245.1E-15            (X_U1.N14549349)    1.0000                
+
+(X_U1.N14549539)    1.0000            (X_U1.N14550160)    1.7500                
+
+(X_U1.N14550180)     .4000            (X_U1.N14565482)    1.0000                
+
+(X_U1.NSHDN_OUT)    1.0000            (X_U1.X_U8.INM1)   -8.9850                
+
+(X_U1.X_U8.INP1)    0.0000            (X_U1.X_U8.INP2)     .2300                
+
+(X_U1.X_U9.INM1)  -10.4500            (X_U1.X_U9.INP1)    0.0000                
+
+(X_U1.X_U9.INP2)     .0825            (X_U1.N145291613)     .2300               
+
+(X_U1.N145292673)     .0825           (X_U1.X_U11.INM1)   -3.2500               
+
+(X_U1.X_U11.INP1)    0.0000           (X_U1.X_U11.INP2)     .4000               
+
+(X_U1.X_U12.YINT)    1.0000           (X_U1.X_U13.INM1)   -3.2500               
+
+(X_U1.X_U13.INP1)    0.0000           (X_U1.X_U13.INP2)     .4000               
+
+(X_U1.X_U16.YINT)    1.0000           
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 0.01
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 10
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  295.0E-06.
+         Time step =  975.8E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT)                    =    2.479mV  \    2.449mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.E_E1)              =    59.61nA  \   119.21nA
+    I(X_U9.e1)                =    1.018nA  \    1.025nA
+    I(X_U1.X_U1.E1)           =         0A  \   -14.90nA
+    I(X_U9.v1)                =   -1.018nA  \   -1.025nA
+
+  These devices failed to converge:
+    X_U9.q3   
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VR)   -6.0000  (  OUT)     .0025  (  VDD)    5.0000  (  VIN)    5.7618      
+
+(  VLM)   12.0000  (N14553)   12.0000 (N14613)   12.0000 (N14652)    4.3515     
+
+(N14689)    4.3515 (N14921)   12.0000 (N14965)   12.0000 (N15355)    5.0000     
+
+(X_U9.7)   -4.8713 (X_U9.8) -440.2100 (X_U9.9)   -4.8892 (X_U9.10)   -4.8892    
+
+(X_U9.11)   -4.8892                   (X_U9.21)   -5.5500                       
+
+(X_U9.22)    6.2118                   (X_U1.UVLO)    1.0000                     
+
+(X_U1.X_U8.1)    1.0000               (X_U1.X_U9.1)    1.0000                   
+
+(X_U1.IN_INTA)    5.0000              (X_U1.IN_INTB)    5.0000                  
+
+(X_U1.X_U11.1)    5.0000              (X_U1.X_U13.1)    5.0000                  
+
+(X_U1.X_U1.101)    1.0000             (X_U1.X_U1.102)     .5000                 
+
+(X_U1.X_U2.101)    1.0000             (X_U1.X_U2.102)     .5000                 
+
+(X_U1.N14500445)   17.0000            (X_U1.N14500451)   17.0000                
+
+(X_U1.N14500477)   17.0000            (X_U1.N14500503)   17.0000                
+
+(X_U1.N14500507)   12.0000            (X_U1.N14500679) 241.6E-15                
+
+(X_U1.N14500841)    1.0000            (X_U1.N14529231)    3.0150                
+
+(X_U1.N14529337)    1.5500            (X_U1.N14537630)    1.7500                
+
+(X_U1.N14537650)     .4000            (X_U1.N14548981)   17.0000                
+
+(X_U1.N14548987)   17.0000            (X_U1.N14549013)   17.0000                
+
+(X_U1.N14549039)   17.0000            (X_U1.N14549043)   12.0000                
+
+(X_U1.N14549193) 245.1E-15            (X_U1.N14549349)    1.0000                
+
+(X_U1.N14549539)    1.0000            (X_U1.N14550160)    1.7500                
+
+(X_U1.N14550180)     .4000            (X_U1.N14565482)    1.0000                
+
+(X_U1.NSHDN_OUT)    1.0000            (X_U1.X_U8.INM1)   -8.9850                
+
+(X_U1.X_U8.INP1)    0.0000            (X_U1.X_U8.INP2)     .2300                
+
+(X_U1.X_U9.INM1)  -10.4500            (X_U1.X_U9.INP1)    0.0000                
+
+(X_U1.X_U9.INP2)     .0825            (X_U1.N145291613)     .2300               
+
+(X_U1.N145292673)     .0825           (X_U1.X_U11.INM1)   -3.2500               
+
+(X_U1.X_U11.INP1)    0.0000           (X_U1.X_U11.INP2)     .4000               
+
+(X_U1.X_U12.YINT)    1.0000           (X_U1.X_U13.INM1)   -3.2500               
+
+(X_U1.X_U13.INP1)    0.0000           (X_U1.X_U13.INP2)     .4000               
+
+(X_U1.X_U16.YINT)    1.0000           
+
+
+**** Interrupt ****
